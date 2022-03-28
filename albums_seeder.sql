@@ -1,5 +1,7 @@
 USE scott;
 
+TRUNCATE albums;
+
 INSERT INTO albums (artist, name, release_date, sales, genre)
 VALUES ('Michael Jackson', 'Thriller', 1982, 47.3, 'Pop,rock, R&B'),
        ('Eagles', 'Their Greatest Hits (1971-1975)', 1976, 41.2, 'Country rock, soft rock, folk rock'),
@@ -34,3 +36,4 @@ VALUES ('Michael Jackson', 'Thriller', 1982, 47.3, 'Pop,rock, R&B'),
        ('Santana', 'Supernatural', 1999, 20.5, 'Latin rock'),
        ('Guns N'' Roses', 'Appetite for Destruction', 1987, 21.6, 'Hard rock'),
        ('Elton John', 'Goodbye Yellow Brick Road', 1973, 8.5, 'rock, pop rock, glam rock');
+
