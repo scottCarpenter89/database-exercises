@@ -20,3 +20,7 @@ WHERE first_name = 'Irena' OR first_name = 'Vidya'
 SELECT first_name
 FROM employees
 WHERE gender = 'm' AND (first_name IN ('Irena', 'Vidya', 'Maya'));
+
+SELECT *
+FROM employees
+WHERE last_name LIKE 'E%' OR last_name LIKE '%E';
