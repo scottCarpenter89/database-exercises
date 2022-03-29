@@ -6,7 +6,7 @@ SELECT release_date FROM albums WHERE name = 'Sgt. Pepper''s Lonely Hearts Band'
 /*Genre of the album Nevermind*/
 SELECT genre FROM albums WHERE name = 'Nevermind';
 /*All albums produced in the 1990's*/
-SELECT * FROM albums WHERE release_date BETWEEN 1989 AND 2000;
+SELECT * FROM albums WHERE release_date BETWEEN 1990 AND 1999;
 /*All albums that sold less than 20 million copies*/
 SELECT * FROM albums WHERE sales < 20;
 /*All albums with the Rock genre*/
