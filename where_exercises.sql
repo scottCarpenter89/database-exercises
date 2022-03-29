@@ -16,3 +16,7 @@ SELECT first_name
 FROM employees
 WHERE first_name = 'Irena' OR first_name = 'Vidya'
    OR first_name = 'Maya';
+
+SELECT first_name
+FROM employees
+WHERE gender = 'm' AND (first_name IN ('Irena', 'Vidya', 'Maya'));
