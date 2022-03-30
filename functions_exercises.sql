@@ -12,6 +12,12 @@ SELECT CONCAT(first_name, ' ', last_name) AS 'People born on X-mas and hired in 
 FROM employees
 WHERE (MONTH(birth_date) = 12) AND (DAY(birth_date) = 25) AND (YEAR(hire_date) BETWEEN 1990 AND 1999);
 
+SELECT CONCAT(first_name, ' ', last_name) AS 'People born on X-mas and hired in the 90''s', birth_date, hire_date
+FROM employees
+WHERE (MONTH(birth_date) = 12) AND (DAY(birth_date) = 25) AND (YEAR(hire_date) BETWEEN 1998 AND 1999)
+ORDER BY hire_date DESC, year(birth_date) DESC
+LIMIT 1;
+
 
 ############################################################################################################
 # The following was copied from order_by_exercise.sql
