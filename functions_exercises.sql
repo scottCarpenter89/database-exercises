@@ -4,6 +4,11 @@ SELECT CONCAT(first_name, ' ', last_name) AS 'Last name sandwiched by E''s'
 FROM employees
 WHERE last_name LIKE 'E%' AND last_name LIKE '%E';
 
+SELECT CONCAT(first_name, ' ', last_name), birth_date AS 'People born on X-mas'
+FROM employees
+WHERE (MONTH(birth_date) = 12) AND (DAY(birth_date) = 25);
+
+
 ############################################################################################################
 # The following was copied from order_by_exercise.sql
 SELECT first_name, last_name
