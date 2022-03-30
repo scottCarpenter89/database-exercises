@@ -15,7 +15,7 @@ WHERE (MONTH(birth_date) = 12) AND (DAY(birth_date) = 25) AND (YEAR(hire_date) B
 SELECT CONCAT(first_name, ' ', last_name) AS 'Oldest person hired last in the 90''s', birth_date, hire_date
 FROM employees
 WHERE (MONTH(birth_date) = 12) AND (DAY(birth_date) = 25) AND (YEAR(hire_date) BETWEEN 1990 AND 1999)
-ORDER BY hire_date DESC, year(birth_date) DESC
+ORDER BY hire_date DESC, year(birth_date) ASC
 LIMIT 1;
 
 #Added ORDER BY hire_date to show the people who have been at the company the longest
