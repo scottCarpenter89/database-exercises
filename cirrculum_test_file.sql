@@ -1,24 +1,15 @@
 USE scott;
 
-SELECT COUNT(*) FROM employees;
+DESCRIBE employees;
+DESCRIBE departments;
+DESCRIBE dept_manager;
+DESCRIBE dept_emp;
+DESCRIBE salaries;
+DESCRIBE titles;
+DESCRIBE albums;
+ALTER TABLE albums
+ADD UNIQUE (artist, name);
+DESCRIBE albums;
 
-SELECT COUNT(first_name)
-FROM employees
-WHERE first_name NOT LIKE '%a%';
-
-SELECT first_name, COUNT(first_name)
-FROM employees
-WHERE first_name NOT LIKE '%a%'
-GROUP BY first_name;
-
-SELECT hire_date, COUNT(*)
-FROM employees
-GROUP BY hire_date
-ORDER BY COUNT(*) DESC
-LIMIT 10;
-
-SELECT hire_date, COUNT(*)
-FROM employees
-GROUP BY hire_date
-ORDER BY COUNT(*) DESC
-LIMIT 10;
+INSERT INTO albums
+VALUES ('1', Michael Jackson', 'Thriller', '1982', '47.3', 'Pop,rock, R&B');
