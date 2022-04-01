@@ -9,10 +9,19 @@ WHERE hire_date IN (
     );
 
 SELECT title, COUNT(title) AS Total
-from titles
+FROM titles
 WHERE emp_no IN (
     SELECT emp_no
     FROM employees
     WHERE first_name = 'Aamod'
     )
 GROUP BY title;
+
+SELECT first_name, last_name
+FROM employees
+WHERE emp_no IN (
+    SELECT emp_no
+    FROM dept_manager
+    WHERE to_date > CURDATE()
+
+    ) AND gender = 'F';
