@@ -37,3 +37,15 @@ WHERE dept_no IN (
         ) AND to_date > CURDATE()
     );
 
+# Want the first and last name of the person with the highest salary
+SELECT first_name, last_name
+FROM employees
+WHERE emp_no IN (
+    SELECT emp_no
+    FROM salaries
+    WHERE to_date > CURDATE() AND salary > 150000
+    ORDER BY salary DESC
+)
+LIMIT 1;
+
+
